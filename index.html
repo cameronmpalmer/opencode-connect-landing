@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenCode for Android - Native Mobile Client</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6',
+                        darkBg: '#0f172a',
+                        cardBg: '#1e293b'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    </style>
+</head>
+<body class="bg-darkBg text-slate-200 antialiased min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="border-b border-slate-800 bg-darkBg/80 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="font-bold text-xl flex items-center gap-2">
+                <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white font-mono font-bold">OC</div>
+                OpenCode<span class="text-primary">Android</span>
+            </div>
+            <a href="#waitlist" class="text-sm font-semibold bg-primary hover:bg-blue-600 text-white px-4 py-2 rounded-full transition-colors">
+                Join Waitlist
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="flex-grow">
+        <section class="max-w-5xl mx-auto px-6 py-20 text-center">
+            <div class="inline-block px-3 py-1 mb-6 rounded-full bg-blue-900/30 text-blue-400 text-sm font-semibold border border-blue-800/50">
+                Bring Your Own Server • Bring Your Own Keys
+            </div>
+            <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+                The native <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Android remote</span><br />
+                for your OpenCode agent.
+            </h1>
+            <p class="text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Stop fighting aggressive background tab killing and clunky mobile web wrappers. Get a persistent, native, and secure mobile client for your existing OpenCode setup.
+            </p>
+            
+            <form id="waitlist" class="max-w-md mx-auto flex flex-col sm:flex-row gap-3">
+                <input type="email" placeholder="Enter your developer email..." required
+                    class="flex-grow px-4 py-3 rounded-lg bg-cardBg border border-slate-700 focus:border-primary focus:ring-2 focus:ring-primary/50 outline-none transition-all placeholder-slate-500">
+                <button type="submit" 
+                    class="bg-primary hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg transition-all shadow-lg shadow-blue-500/20 whitespace-nowrap">
+                    Get Early Access
+                </button>
+            </form>
+            <p class="text-sm text-slate-500 mt-4">Target price: $4.99 one-time purchase. No subscriptions.</p>
+        </section>
+
+        <!-- Features Grid -->
+        <section class="bg-cardBg border-y border-slate-800 py-20">
+            <div class="max-w-5xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold mb-4">Why a Native App?</h2>
+                    <p class="text-slate-400">Web apps on mobile just don't cut it for long-running AI tasks.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="p-6 rounded-2xl bg-darkBg border border-slate-800">
+                        <div class="w-12 h-12 bg-blue-900/30 rounded-xl flex items-center justify-center text-blue-400 mb-4 text-2xl">
+                            ⚡
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Background Persistence</h3>
+                        <p class="text-slate-400">Mobile browsers kill WebSockets when you switch apps. Our native background service keeps your connection alive so your agent never drops a thought.</p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="p-6 rounded-2xl bg-darkBg border border-slate-800">
+                        <div class="w-12 h-12 bg-blue-900/30 rounded-xl flex items-center justify-center text-blue-400 mb-4 text-2xl">
+                            🔔
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Push Notifications</h3>
+                        <p class="text-slate-400">Start a massive refactor, lock your phone, and put it in your pocket. Get a native push notification the second OpenCode finishes or needs your input.</p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="p-6 rounded-2xl bg-darkBg border border-slate-800">
+                        <div class="w-12 h-12 bg-blue-900/30 rounded-xl flex items-center justify-center text-blue-400 mb-4 text-2xl">
+                            🔗
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">OS Share Intents</h3>
+                        <p class="text-slate-400">Found a bug on GitHub mobile? Reading StackOverflow? Use the native Android share menu to send code snippets directly to your OpenCode session.</p>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="p-6 rounded-2xl bg-darkBg border border-slate-800">
+                        <div class="w-12 h-12 bg-blue-900/30 rounded-xl flex items-center justify-center text-blue-400 mb-4 text-2xl">
+                            🔒
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Hardware-Backed Security</h3>
+                        <p class="text-slate-400">Your server URLs, API keys, and GitHub tokens are encrypted using the Android Keystore system. Secure access with fingerprint or face unlock.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center text-slate-500 text-sm">
+        <p>Built for the OpenCode community. Not officially affiliated with OpenCode.</p>
+    </footer>
+
+    <script>
+        document.getElementById('waitlist').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = e.target.querySelector('input').value;
+            alert(`Thanks! ${email} has been added to the waitlist. (Mockup functionality)`);
+            e.target.reset();
+        });
+    </script>
+</body>
+</html>
