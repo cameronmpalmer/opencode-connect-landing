@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpenCode for Android - Native Mobile Client</title>
+    <title>OpenCode Connect — Mobile Client That Actually Works</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -30,7 +30,7 @@
         <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="font-bold text-xl flex items-center gap-2">
                 <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white font-mono font-bold">OC</div>
-                OpenCode<span class="text-primary">Android</span>
+                OpenCode<span class="text-primary">Connect</span>
             </div>
             <a href="#waitlist" class="text-sm font-semibold bg-primary hover:bg-blue-600 text-white px-4 py-2 rounded-full transition-colors">
                 Join Waitlist
@@ -42,88 +42,192 @@
     <main class="flex-grow">
         <section class="max-w-5xl mx-auto px-6 py-20 text-center">
             <div class="inline-block px-3 py-1 mb-6 rounded-full bg-blue-900/30 text-blue-400 text-sm font-semibold border border-blue-800/50">
-                Bring Your Own Server • Bring Your Own Keys
+                Works with Tailscale &bull; LAN &bull; Cloudflare Tunnel
             </div>
             <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
-                The native <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Android remote</span><br />
-                for your OpenCode agent.
+                Your OpenCode server,<br />
+                in your pocket. <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Finally.</span>
             </h1>
             <p class="text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-                Stop fighting aggressive background tab killing and clunky mobile web wrappers. Get a persistent, native, and secure mobile client for your existing OpenCode setup.
+                Connecting your phone to your OpenCode server should take 30 seconds, not 30 minutes of debugging TLS errors. OpenCode Connect auto-detects your setup, guides you through any hiccups, and stays connected in your pocket.
             </p>
-            
+
             <form id="waitlist" class="max-w-md mx-auto flex flex-col sm:flex-row gap-3">
-                <input type="email" placeholder="Enter your developer email..." required
+                <input type="email" name="email" placeholder="Enter your developer email..." required
                     class="flex-grow px-4 py-3 rounded-lg bg-cardBg border border-slate-700 focus:border-primary focus:ring-2 focus:ring-primary/50 outline-none transition-all placeholder-slate-500">
-                <button type="submit" 
+                <button type="submit"
                     class="bg-primary hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg transition-all shadow-lg shadow-blue-500/20 whitespace-nowrap">
-                    Get Early Access
+                    Join the Waitlist
                 </button>
             </form>
-            <p class="text-sm text-slate-500 mt-4">Target price: $4.99 one-time purchase. No subscriptions.</p>
+            <p class="text-sm text-slate-500 mt-4">$4.99 one-time &nbsp;&middot;&nbsp; No subscription &nbsp;&middot;&nbsp; No cloud &nbsp;&middot;&nbsp; Your server, your keys</p>
         </section>
 
         <!-- Features Grid -->
         <section class="bg-cardBg border-y border-slate-800 py-20">
             <div class="max-w-5xl mx-auto px-6">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl font-bold mb-4">Why a Native App?</h2>
-                    <p class="text-slate-400">Web apps on mobile just don't cut it for long-running AI tasks.</p>
+                    <h2 class="text-3xl font-bold mb-4">Built to connect. Built to stay connected.</h2>
+                    <p class="text-slate-400">Every other OpenCode app fails before you send your first message. Here's what we do differently.</p>
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-8">
-                    <!-- Feature 1 -->
+                    <!-- Feature 1: Connects on first try -->
                     <div class="p-6 rounded-2xl bg-darkBg border border-slate-800">
                         <div class="w-12 h-12 bg-blue-900/30 rounded-xl flex items-center justify-center text-blue-400 mb-4 text-2xl">
-                            ⚡
+                            🔌
                         </div>
-                        <h3 class="text-xl font-bold mb-2">Background Persistence</h3>
-                        <p class="text-slate-400">Mobile browsers kill WebSockets when you switch apps. Our native background service keeps your connection alive so your agent never drops a thought.</p>
+                        <h3 class="text-xl font-bold mb-2">Connects on the first try</h3>
+                        <p class="text-slate-400">Enter your server URL — HTTP or HTTPS, LAN IP or Tailscale address, with or without a password. We run a health check, auto-detect your protocol, and tell you exactly what's wrong if something's off. No cryptic error messages.</p>
                     </div>
 
-                    <!-- Feature 2 -->
+                    <!-- Feature 2: Push Notifications -->
                     <div class="p-6 rounded-2xl bg-darkBg border border-slate-800">
                         <div class="w-12 h-12 bg-blue-900/30 rounded-xl flex items-center justify-center text-blue-400 mb-4 text-2xl">
                             🔔
                         </div>
-                        <h3 class="text-xl font-bold mb-2">Push Notifications</h3>
-                        <p class="text-slate-400">Start a massive refactor, lock your phone, and put it in your pocket. Get a native push notification the second OpenCode finishes or needs your input.</p>
+                        <h3 class="text-xl font-bold mb-2">Done? We'll tell you.</h3>
+                        <p class="text-slate-400">Kick off a big refactor, lock your phone, go make coffee. The moment OpenCode finishes — or needs your input — you get a native notification. No polling, no keeping the screen on, no checking manually.</p>
                     </div>
 
-                    <!-- Feature 3 -->
+                    <!-- Feature 3: Background Persistence -->
                     <div class="p-6 rounded-2xl bg-darkBg border border-slate-800">
                         <div class="w-12 h-12 bg-blue-900/30 rounded-xl flex items-center justify-center text-blue-400 mb-4 text-2xl">
-                            🔗
+                            ⚡
                         </div>
-                        <h3 class="text-xl font-bold mb-2">OS Share Intents</h3>
-                        <p class="text-slate-400">Found a bug on GitHub mobile? Reading StackOverflow? Use the native Android share menu to send code snippets directly to your OpenCode session.</p>
+                        <h3 class="text-xl font-bold mb-2">Stays connected when you switch apps</h3>
+                        <p class="text-slate-400">Mobile browsers kill your session the moment you check Slack. A native background service keeps your connection alive and picks back up instantly when you return. Your agent never drops mid-task.</p>
                     </div>
 
-                    <!-- Feature 4 -->
+                    <!-- Feature 4: Native Kotlin -->
                     <div class="p-6 rounded-2xl bg-darkBg border border-slate-800">
                         <div class="w-12 h-12 bg-blue-900/30 rounded-xl flex items-center justify-center text-blue-400 mb-4 text-2xl">
-                            🔒
+                            🏗️
                         </div>
-                        <h3 class="text-xl font-bold mb-2">Hardware-Backed Security</h3>
-                        <p class="text-slate-400">Your server URLs, API keys, and GitHub tokens are encrypted using the Android Keystore system. Secure access with fingerprint or face unlock.</p>
+                        <h3 class="text-xl font-bold mb-2">Native Kotlin. Not a web wrapper.</h3>
+                        <p class="text-slate-400">Built from scratch in Kotlin with Jetpack Compose. Not a React app jammed into a shell, not a Capacitor project, not a WebView. It looks and feels like an Android app because it is one.</p>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section class="max-w-5xl mx-auto px-6 py-20 text-center">
+            <h2 class="text-3xl font-bold mb-4">Up and running in under a minute</h2>
+            <p class="text-slate-400 mb-16">No firewall rules to configure. No certificates to generate. No documentation rabbit holes.</p>
+
+            <div class="grid md:grid-cols-3 gap-8 text-left">
+                <!-- Step 1 -->
+                <div class="flex flex-col items-start">
+                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold text-lg mb-5 shrink-0">
+                        1
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Enter your server URL</h3>
+                    <p class="text-slate-400">Tailscale address, local IP, or public URL — any format works. We accept it as-is and figure out the rest.</p>
+                    <div class="mt-4 w-full px-3 py-2 rounded-lg bg-cardBg border border-slate-700 text-slate-500 font-mono text-sm">
+                        http://100.64.0.1:4097
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="flex flex-col items-start">
+                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold text-lg mb-5 shrink-0">
+                        2
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">We verify the connection</h3>
+                    <p class="text-slate-400">A health check confirms your server is reachable. Protocol, auth, and version are detected automatically. Clear guidance if anything needs fixing.</p>
+                    <div class="mt-4 w-full px-3 py-2 rounded-lg bg-green-900/20 border border-green-800/50 text-green-400 font-mono text-sm">
+                        ✓ healthy &nbsp;·&nbsp; v1.1.53
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="flex flex-col items-start">
+                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold text-lg mb-5 shrink-0">
+                        3
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Start coding from anywhere</h3>
+                    <p class="text-slate-400">Your sessions are right there. Start a new task, check on a running one, approve a tool call — all from your couch.</p>
+                    <div class="mt-4 w-full px-3 py-2 rounded-lg bg-cardBg border border-slate-700 text-slate-300 font-mono text-sm">
+                        ▶ resume-feature-branch
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom CTA -->
+        <section class="bg-cardBg border-t border-slate-800 py-20">
+            <div class="max-w-xl mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-4">Be first in line.</h2>
+                <p class="text-slate-400 mb-8">Join the waitlist and get notified when the beta opens. Early access, one-time price.</p>
+                <form id="waitlist-bottom" class="flex flex-col sm:flex-row gap-3">
+                    <input type="email" name="email" placeholder="Enter your developer email..." required
+                        class="flex-grow px-4 py-3 rounded-lg bg-darkBg border border-slate-700 focus:border-primary focus:ring-2 focus:ring-primary/50 outline-none transition-all placeholder-slate-500">
+                    <button type="submit"
+                        class="bg-primary hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg transition-all shadow-lg shadow-blue-500/20 whitespace-nowrap">
+                        Join the Waitlist
+                    </button>
+                </form>
+                <p class="text-sm text-slate-500 mt-4">$4.99 one-time &nbsp;&middot;&nbsp; No subscription &nbsp;&middot;&nbsp; No cloud &nbsp;&middot;&nbsp; Your server, your keys</p>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
     <footer class="py-8 text-center text-slate-500 text-sm">
-        <p>Built for the OpenCode community. Not officially affiliated with OpenCode.</p>
+        <p>An unofficial community project. Not affiliated with Anomaly Co or the OpenCode team.</p>
     </footer>
 
     <script>
-        document.getElementById('waitlist').addEventListener('submit', (e) => {
+        // TODO: Replace REPLACE_WITH_YOUR_FORMSPREE_FORM_ID with your real Formspree form ID.
+        // Sign up at https://formspree.io, create a form named "OpenCode Connect Waitlist",
+        // and paste the 8-character ID here (e.g. 'xpzgkwqr').
+        const FORMSPREE_URL = 'https://formspree.io/f/REPLACE_WITH_YOUR_FORMSPREE_FORM_ID';
+
+        async function handleWaitlistSubmit(e) {
             e.preventDefault();
-            const email = e.target.querySelector('input').value;
-            alert(`Thanks! ${email} has been added to the waitlist. (Mockup functionality)`);
-            e.target.reset();
-        });
+            const form = e.target;
+            const button = form.querySelector('button[type="submit"]');
+
+            button.disabled = true;
+            button.textContent = 'Joining...';
+
+            try {
+                const response = await fetch(FORMSPREE_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify({ email: form.querySelector('input[type="email"]').value })
+                });
+
+                if (response.ok) {
+                    form.innerHTML = '<p class="text-green-400 font-semibold py-3">&#10003; You\'re on the list. We\'ll email you when the beta opens.</p>';
+                } else {
+                    button.disabled = false;
+                    button.textContent = 'Join the Waitlist';
+                    showFormError(form);
+                }
+            } catch (_) {
+                button.disabled = false;
+                button.textContent = 'Join the Waitlist';
+                showFormError(form);
+            }
+        }
+
+        function showFormError(form) {
+            let err = form.querySelector('.form-error');
+            if (!err) {
+                err = document.createElement('p');
+                err.className = 'form-error text-red-400 text-sm mt-2';
+                form.appendChild(err);
+            }
+            err.textContent = 'Something went wrong. Please try again.';
+        }
+
+        document.getElementById('waitlist').addEventListener('submit', handleWaitlistSubmit);
+        document.getElementById('waitlist-bottom').addEventListener('submit', handleWaitlistSubmit);
     </script>
 </body>
 </html>
